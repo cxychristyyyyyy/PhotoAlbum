@@ -19,7 +19,7 @@ Resources:
   CDDemoLambda2:
     Type: "AWS::Serverless::Function"
     Properties:
-      FunctionName: testLex
+      FunctionName: searchPhotos
       Handler: lambda_function.lambda_handler
       Runtime: python3.8
       CodeUri: ./searchPhotos
