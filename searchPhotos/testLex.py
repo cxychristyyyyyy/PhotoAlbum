@@ -14,6 +14,7 @@ def photoDetails(photo):
     print("11", url)
     res = {"url": url, "labels": labels}
     print("16", res)
+    #print("testtesttest)
     return res
 
 
