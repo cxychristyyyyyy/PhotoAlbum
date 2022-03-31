@@ -5,7 +5,7 @@ import inflect
 
 
 def photoDetails(photo):
-    # success!
+    # success!  test! plz!
     print("6", photo)
     bucket = photo["_source"]["bucket"]
     name = photo["_source"]["objectKey"]
