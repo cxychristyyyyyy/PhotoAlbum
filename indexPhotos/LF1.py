@@ -10,6 +10,7 @@ ES_ENDPOINT = 'https://search-photos-mpatg4ejrpb2log4ifkxzkfaxi.us-east-1.es.ama
 #helper function for getting url
 def get_url(index, type):
     url = ES_ENDPOINT + '/' + index + '/' + type
+    # test test test
     return url
 
 #get lables from uploaded photos
