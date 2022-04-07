@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+    <script type="text/javascript" src="code.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body  style="background-image: url('background.jpg'); background-size: 100%;">
+	 <div class="container" style="text-align: center; height:100%; ">
+	 	<div>
+  	 	<form>
+      		<input type="text" id="query" style="height:25px;font-size:20px;border:0px;border-radius:4px;padding-left:8px;padding-right:8px;"/>
+          <i class="fa fa-search fa-2x" onclick="submitSearch()" style="padding: 10px 2px 8px 2px; vertical-align:middle;color:aliceblue"></i>
+          <i class="fa fa-microphone fa-2x" id="microphone_icon" onclick="audioProcessing()" style="padding: 10px 2px 6px 2px; vertical-align: middle;color:aliceblue"></i>
+  		</form>
+  		<div id="searchResponse"></div>
+		</div>
+		<div >
+			<br><br>
+			<label for="img" class = "fa fa-cloud-upload" style="height:40px;font-size:20px;color:aliceblue" ></label>
+  			<input type="file" id="imgfile" name="img" accept="image/*" onchange="previewFile(this);" style="height:100px;width:220px;font-size:15px;color: aliceblue"><br>
+			<input type="text" id="label" placeholder="image label" style="height:45px;font-size:20px;border:0px;border-radius:4px;padding-left:8px;padding-right:8px;"/>
+  			<input type="submit" id="submit_upload_button" onclick="uploadImage(event)" style="height:30px;font-size:15px;border:0px;border-radius:4px;"> 
+  			<div id="uploadResponse"></div>
+		</div>
+		<table width="100%" style="height: 100%;" border="0">
+		  <tr>
+		    <td><p id="displayImages" /></td>
+		  </tr>
+		</table>
+	</div>
+</body>
+</html>
