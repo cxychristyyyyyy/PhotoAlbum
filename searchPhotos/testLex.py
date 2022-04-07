@@ -22,8 +22,8 @@ def photoDetails(photo):
 def searchPhotos(keyWords):
     region = "us-east-1"
     service = "es"
-    auth = ("Master", "CloudComputing1!")
-    host = "https://search-photos-mpatg4ejrpb2log4ifkxzkfaxi.us-east-1.es.amazonaws.com"
+    auth = ("*****", "*****")
+    host = "*****"
     index = "photos"
     q = ""
     for i in keyWords:
@@ -111,7 +111,7 @@ def lambda_handler(event, context):
 
         # using the elastic search to search for the photos
         res = searchPhotos(keyWords)
-        print(res, "98")
+        # print(res, "98")
 
         # format the response:
 

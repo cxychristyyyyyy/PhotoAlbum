@@ -4,7 +4,7 @@ import requests
 from datetime import date, datetime
 
 
-ES_ENDPOINT = 'https://search-photos-mpatg4ejrpb2log4ifkxzkfaxi.us-east-1.es.amazonaws.com'
+ES_ENDPOINT = '*****'
 
 
 #helper function for getting url
@@ -82,7 +82,7 @@ def lambda_handler(event, context):
     headers = {"Content-Type": "application/json"}
     url = get_url('photos', 'Photo')
 
-    auth = ('Master', 'CloudComputing1!')
+    auth = ('*****', '*****')
 
     req = requests.post(url, data = JSON_object, headers = headers, auth = auth)
     print("response from es: ", req)
